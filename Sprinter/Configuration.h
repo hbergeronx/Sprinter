@@ -3,6 +3,8 @@
 
 // BASIC SETTINGS: select your board type, thermistor type, axis scaling, and endstop configuration
 
+//modified 31Dec2013 MEH for CounterCultureLabs printer
+
 //// The following define selects which electronics board you have. Please choose the one that matches your setup
 // MEGA/RAMPS up to 1.2  = 3,
 // RAMPS 1.3/1.4 = 33
@@ -32,9 +34,9 @@
 
 //// Calibration variables
 // X, Y, Z, E steps per unit - Metric Prusa Mendel with Wade extruder:
-#define _AXIS_STEP_PER_UNIT {80, 80, 3200/1.25,700}
+//#define _AXIS_STEP_PER_UNIT {80, 80, 3200/1.25,700}
 // Metric Prusa Mendel with Makergear geared stepper extruder:
-//#define _AXIS_STEP_PER_UNIT {80,80,3200/1.25,1380}
+#define _AXIS_STEP_PER_UNIT {53.2,52.1,2048,450}
 // MakerGear Hybrid Prusa Mendel:
 // Z axis value is for .9 stepper(if you have 1.8 steppers for Z, you need to use 2272.7272)
 //#define _AXIS_STEP_PER_UNIT {104.987, 104.987, 4545.4544, 1487}
@@ -117,7 +119,7 @@ const bool DISABLE_E = false;
 //-----------------------------------------------------------------------
 // Inverting axis direction
 //-----------------------------------------------------------------------
-const bool INVERT_X_DIR = false;
+const bool INVERT_X_DIR = true;
 const bool INVERT_Y_DIR = false;
 const bool INVERT_Z_DIR = true;
 const bool INVERT_E_DIR = false;
@@ -139,8 +141,8 @@ const bool max_software_endstops = true; //If true, axis won't move to coordinat
 //-----------------------------------------------------------------------
 //Max Length for Prusa Mendel, check the ways of your axis and set this Values
 //-----------------------------------------------------------------------
-const int X_MAX_LENGTH = 200;
-const int Y_MAX_LENGTH = 200;
+const int X_MAX_LENGTH = 160;
+const int Y_MAX_LENGTH = 160;
 const int Z_MAX_LENGTH = 100;
 
 //-----------------------------------------------------------------------
